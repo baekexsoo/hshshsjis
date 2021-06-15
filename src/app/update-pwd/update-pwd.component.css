@@ -1,0 +1,46 @@
+.con_cou{
+   
+    align-content: center;
+}
+.u-btn-primary{
+    text-align: center;
+}
+.u-label--secondary{
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    color: black;
+}
+.co_body{
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    border: outset;
+}
+.dis__form{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+.aff_erreu{
+    margin: auto;
+    text-align: center;
+}
+.btn_cli{
+    margin: auto;
+    text-align: center;
+}
+.bot{
+    margin-bottom: -6%;
+}
+.con_marg{
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+
+}
+.alert-success{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}

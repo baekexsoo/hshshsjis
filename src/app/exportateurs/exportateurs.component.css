@@ -1,0 +1,15 @@
+
+.pos_titr {
+    margin-left:79%;
+}
+
+@media (max-width: 575.98px) {   
+    .pos_titr {
+        display: -webkit-box;
+        margin-left: 0%;
+    }
+    .aff_chm {
+        display: none;
+    }
+    }
+

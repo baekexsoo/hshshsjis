@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div class="di_for">
+<form>
+    <span class="u-label u-label--secondary">Completer votre profil</span>
+    <div class="contenu">
+  <div class="form-group">
+    <label class="h6 small d-block text-uppercase" for="exampleInputEmail1">Nom</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="objet.nom" name="nom" aria-describedby="emailHelp" placeholder="" />
+    <label class="h6 small d-block text-uppercase" for="exampleInputEmail1">Email</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="objet.email" name="email" aria-describedby="emailHelp" placeholder="" />
+    <label class="h6 small d-block text-uppercase" for="exampleInputEmail1">Numero</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="objet.numero" name="numero" aria-describedby="emailHelp" placeholder="" />
+    <label class="h6 small d-block text-uppercase" for="exampleInputEmail1">Numero IFU</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="objet.numeroIFU" name="ifu" aria-describedby="emailHelp" placeholder=""/>
+    <label class="h6 small d-block text-uppercase" for="exampleInputEmail1">Quartier ou Village</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="objet.quartierOuVillage" name="quartierOuVillage" aria-describedby="" placeholder="" />
+    <label class="h6 small d-block text-uppercase" for="exampleInputEmail1">Budget</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" [(ngModel)]="objet.budget" name="budget" aria-describedby="emailHelp" placeholder="" />
+  </div>
+  <div class="col-12">
+      <span class="small text-danger aff_erreu">{{sms_err}}</span><br/>
+    </div>
+
+  <div class="col-6 text-center btn_cli">
+      <div *ngIf="loader" id="testimonialsNavMain" class="js-slick-carousel js-slick-carousel u-slick u-content-centered-y p-4 mb-0 u-stroke-midnightblue"
+      data-infinite="true"
+      data-autoplay="true"
+      data-speed="5000"
+      data-fade="true"
+      data-nav-for="#testimonialsNavPagination"></div>
+  <button type="submit" class="btn btn-primary" (click)="update()">Mise à jour</button>
+</div>
+</div>
+</form>
+</div>
+
+<app-footer></app-footer>

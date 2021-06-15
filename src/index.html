@@ -1,0 +1,135 @@
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Web application for agricultural data Prediction">
+  <meta name="keywords" content="BIG DATA, Data Science, Agricultural">
+  <meta name="author" content="RINTIO">
+  <title>DuniyaData</title>
+  <base href="/">
+  <link rel="preload" href="./assets/css" as="style">
+  <link rel="preload" href="./assets/vendor" as="script">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="./assets/svg/logos/favicon.png">
+  <!-- Google Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+
+
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="./assets/vendor/custombox/dist/custombox.min.css">
+  <link type="text/css" href="./assets/vendor/animate.css">
+  <link rel="stylesheet" href="./assets/vendor/font-awesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="./assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="./assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="./assets/vendor/fancybox/jquery.fancybox.css">
+  <link rel="stylesheet" href="./assets/vendor/slick-carousel/slick/slick.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="./assets/vendor/chartist/dist/chartist.min.css">
+<link rel="stylesheet" href="./assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.css">
+
+    <!-- CSS Front Template -->
+  <link rel="stylesheet" href="./assets/css/front.css">
+  <link rel="stylesheet" href="./assets/css/custom-front.css">
+  
+</head>
+<body>
+<app-root>
+   
+    
+</app-root>
+  
+   <!-- JS Global Compulsory -->
+   <script src="./assets/vendor/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/vendor/jquery-migrate/dist/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="./assets/vendor/popper.js/dist/umd/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/vendor/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="./assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="./assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="./assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="./assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+  <script src="./assets/vendor/typed.js/lib/typed.min.js"></script>
+  <script src="./assets/vendor/slick-carousel/slick/slick.js"></script>
+<script src="./assets/vendor/appear.js"></script>
+<script src="./assets/vendor/chartist/dist/chartist.min.js"></script>
+<script src="./assets/vendor/chartist-js-tooltip/chartist-plugin-tooltip.js"></script>
+
+ 
+  <!-- JS Front -->
+  <script src="./assets/js/hs.core.js"></script>
+  <script src="./assets/vendor/custombox/dist/custombox.min.js"></script>
+  <script src="./assets/js/components/hs.modal-window.js"></script>
+  <script src="./assets/js/components/hs.header.js"></script>
+  <script src="./assets/js/components/hs.unfold.js"></script>
+  <script src="./assets/js/helpers/hs.focus-state.js"></script>
+  <script src="./assets/js/components/hs.malihu-scrollbar.js"></script>
+  <script src="./assets/js/components/hs.validation.js"></script>
+  <script src="./assets/js/components/hs.fancybox.js"></script>
+  <script src="./assets/js/components/hs.slick-carousel.js"></script>
+  <script src="./assets/js/components/hs.show-animation.js"></script>
+  <script src="./assets/js/components/hs.go-to.js"></script>
+  <script src="./assets/js/components/hs.unfold.js"></script>
+  
+ 
+  <script>
+    $(document).on('ready', function () {
+      // initialization of unfold component
+      $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+    });
+  </script>
+
+  <!-- JS Plugins Init. -->
+<script>
+    $(document).on('ready', function () {
+        // initialization of autonomous popups
+        $.HSCore.components.HSModalWindow.init('.js-modal-window', {
+            autonomous: true
+        })
+    });
+</script>
+
+  <script>
+  $(document).on('ready', function () {
+    // initialization of slick carousel
+    $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+  });
+</script>
+
+<script>
+    $(document).on('ready', function () {
+      // initialization of unfold component
+      $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+    });
+  </script>
+  <!-- JS Implementing Plugins -->
+  <script src="./assets/js/components/hs.unfold.js"></script>
+  
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of unfold component
+      $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+    });
+  </script>
+
+  <script>
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    </script>
+<script>
+$('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.pos_titr {
+    margin-left:71%;
+}
+@media (max-width: 575.98px) {   
+    .pos_titr {
+        display: -webkit-box;
+        margin-left: 0%;
+    }
+    }
+
+    table, th ,td{
+      
+        border-collapse: collapse;
+       
+      }
+     
+      td{
+        
+        padding:20px;
+        
+      }
+
+      th{
+          padding-left:10px;
+      }
+    
+  a{
+      color: #f2f2f2;
+  }
+  
+  

@@ -1,0 +1,109 @@
+<app-header></app-header>
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main">
+  <!-- Blog Grid Section -->
+  <div class="container u-space-4-top u-space-5-top--md u-space-4-top--lg u-space-3-bottom">
+    <!-- Title -->
+    <div class="w-md-80 w-lg-60 mb-9">
+       <hr>
+
+      <h1 class="font-weight-normal"><span class="text-primary font-weight-bold"> {{ item.programName }} </span></h1>
+    </div>
+    <!-- End Title -->
+      <div>
+     <div class="mb-3 ">  <h5 class="d-inline"> <strong> Dates : </strong></h5>  <div class="d-inline"> {{ item.startDate }} - {{ item.endDate }}  </div>  <br></div>
+      <div class="mb-3 ">  <h5  class="d-inline"> <strong> Durée : </strong> </h5>  <div class="d-inline"> {{ item.period | slice:0:5 }} Jours </div>  <br></div>
+      <div class="mb-3 ">   <h5  class="d-inline"><strong> Bénéficiaires : </strong> </h5>  <div class="d-inline ben"> {{ item.recipients }}  </div>  <br> </div>
+
+        </div><br>
+
+    <div class="row">
+      <div class="col-lg-12 col-sm-10 order-lg-2 mb-9 mb-lg-0">
+        <div class="card-group d-block d-md-flex u-card--gutters-2-md">
+       
+
+       
+<div class="card text-center">
+<div class="card-header">
+  <nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+  <a class="nav-item nav-link onglet active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Objectifs</a>
+  <a class="nav-item nav-link onglet" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Zones</a>
+  <a class="nav-item nav-link onglet" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Secteurs</a>
+  <a class="nav-item nav-link onglet" id="nav-contact-tab" data-toggle="tab" href="#nav-impact" role="tab" aria-controls="nav-impact" aria-selected="false">Impacts</a>
+  <a class="nav-item nav-link onglet" id="nav-contact-tab" data-toggle="tab" href="#nav-result" role="tab" aria-controls="nav-result" aria-selected="false">Résultats attendus</a>
+
+</div>
+</nav>
+</div>
+<div class="card-body">
+  <div class="tab-content" id="nav-tabContent">
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+<h5 class="card-title d-inline">
+Objectif Principal :  
+</h5>
+<div class="d-inline"> <p class="card-text"> {{ item.principalObjectif }} </p>   </div><br>
+ <h5 class="card-title d-inline mr-7">
+Objectif Spécifiques :  
+</h5>
+<div class="d-inline"> <p class="card-text"> {{ item.specificObjectif }} </p>   </div><br>
+</div>
+
+
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+  <p class="card-text" *ngFor = "let i of item.zones" >
+  {{ i['zoneName'] }}
+  </p>  
+</div>
+<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+  <span class="card-text d-inline">
+  {{ item.targetedSectors }},
+  </span>  
+
+</div>
+ <div class="tab-pane fade" id="nav-impact" role="tabpanel" aria-labelledby="nav-impact-tab">
+  <p class="card-text">
+  {{ item.impactIndicators }}
+  </p>  
+
+</div>
+ <div class="tab-pane fade" id="nav-result" role="tabpanel" aria-labelledby="nav-result-tab">
+  <p class="card-text">
+  {{ item.expectedResults }}
+  </p>  
+
+</div>
+</div>
+</div>
+</div>
+       
+        </div>
+
+       
+
+
+
+
+     
+        <div class="u-space-2-bottom"></div>
+
+      
+      </div>
+
+   
+    </div>
+  </div>
+  <!-- End Blog Grid Section -->
+
+  <!-- Sticky Block End Point -->
+  <div id="stickyBlockEndPoint"></div>
+
+
+  </main>
+<!-- ========== END MAIN ========== -->
+
+    <div>
+      <app-footer></app-footer>
+    </div>          

@@ -1,0 +1,53 @@
+<main id="content" role="main">
+
+    <div class="d-flex align-items-center position-relative min-height-100vh--lg">
+
+<div class="col-lg-5 col-xl-4 d-none d-lg-flex align-items-center u-gradient-half-primary-v1 min-height-100vh--lg px-0">
+  <div class="w-100 p-5">
+      <app-annonce></app-annonce>
+  </div>
+</div>
+
+<div *ngIf="!confirm" class="col-md-8 col-lg-7 col-xl-6 offset-md-2 offset-lg-2 u-space-3-bottom u-space-top-0--lg">
+  <form class="col-sm-7">
+      <div class="mb-7">
+          <h2 class="h3 text-primary font-weight-normal mb-0">Restauration de mot passe <span class="font-weight-bold"> .</span></h2>
+
+        </div>
+      <div class="">
+    <div class="form-group">
+      <label class="h6 small d-block text-uppercase" for="exampleInputEmail1"></label>
+      <input type="email" class="form-control" [(ngModel)]="mail" id="exampleInputEmail1" name="mail" aria-describedby="emailHelp" placeholder="Email" />
+      <div class="col-12">
+        <span class="small text-danger">{{sms_err}}</span><br/>
+      </div>
+    </div>
+    <div class="col-7 col-sm-6 text-center">
+        <div *ngIf="loading" id="testimonialsNavMain" class="js-slick-carousel js-slick-carousel u-slick u-content-centered-y p-4 mb-0 u-stroke-midnightblue load"
+        data-infinite="true"
+        data-autoplay="true"
+        data-speed="5000"
+        data-fade="true"
+        data-nav-for="#testimonialsNavPagination">
+        </div>
+    <div class="uk-text-center">
+    <button type="submit" class="btn btn-primary" (click)="restor()">Valider</button>
+  </div>
+  </div>
+  </div>
+  </form>
+  </div>
+
+
+
+<div class="mb-7" *ngIf="confirm">
+    <h1 class="h3 text-primary font-weight-normal mb-0"><span class="font-weight-bold">Restauration Réussie</span></h1>
+    <p>Un Email vous à été envoyé sur l'adresse <span class="text-success">{{Email}}</span>. 
+       Veuillez consulter votre compte pour vous connecter.</p>
+    <div class="col-7 col-sm-6 text-right">
+     <a href=""  href="/home"><button type="submit" class="btn btn-primary u-btn-primary transition-3d-hover" (click)="sign()">Se Connecter</button></a>
+    </div>
+  </div>
+  </div>
+</main>
+<app-footer></app-footer>

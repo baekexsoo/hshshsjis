@@ -1,0 +1,154 @@
+<app-header></app-header>
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" style="min-height:-webkit-fill-available">
+  <div class="container u-space-3-top--lg mb-5">
+    <div class="container position-relativez-index-2 pos_titr mb-4">
+      <div class="mx-auto">
+        <h1 class="h4 text-primary" style="font-size: 1.7rem;">Programmes</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="u-space-3-bottom">
+    <div class="container" *ngIf="!loading">
+
+      <div class="row align-items-md-center u-space-2 d-none d-sm-block">
+        <div class="col-lg-12 mb-12 mb-lg-0">
+          <form class="js-focus-state input-group u-form">
+            <div class="input-group-prepend u-form__prepend">
+              <span class="input-group-text u-form__text">
+                <span class="fa fa-search"></span>
+              </span>
+            </div>
+            <input type="search" class="form-control u-form__input" [(ngModel)]="search" name="search"
+              placeholder="Filtre par projets" aria-label="Search Front">
+          </form>
+        </div>
+      </div>
+
+      <div class="u-bg-img-hero mb-3"
+        *ngFor="let un of list_union| filter:search | paginate: { itemsPerPage: 7, currentPage: p }"
+        style="background-color: rgb(236, 236, 236);  margin-top: 12px;background-image: url(../assets/img/1920x1080/img9.jpg); ">
+        <div class="container u-space-2">
+          <div class="row align-items-md-center">
+            <div class="col-md-8 mb-7 mb-md-0">
+              <div class="col-md-12 mb-4">
+                <div class="d-flex mr-4">
+                  <span class="text-primary">
+                    <span style="font-weight: bold;font-size: 130%;" >{{un.name}}</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="media-body name mr-md-0">
+                  <p class="u-text-light mb-0 text-primary" style="color: #000; font-weight: bolder;">Mission : <span
+                      style="color:black;"> {{ un.mission  }}</span>
+
+                  </p>
+                </div>
+              </div>
+
+              <!--div class="media">
+                <div class="d-flex mr-4">
+                  <span class="">
+                    <span>{{un.name}}</span>
+                  </span>
+                </div>
+                <div class="media-body name">
+                  <h4 class="text-black font-weight-bold">{{ un.programName }}</h4>
+                  <p class="u-text-light mb-0" style="color: #000; font-weight: bolder">Mission : <span
+                      style="color: rgba(35, 34, 34, 0.7);"> {{ un.mission  }}</span>
+
+                  </p>
+                </div>
+              </div-->
+            </div>
+
+            <div class="col-md-4 text-md-right">
+              <div class="col-md-12 mb-md-2">
+                  <a href="{{un.website}}" class="btn btn-lg btn_details u-btn-warning transition-3d-hover" style="width:37%;background-color: #fff;"
+                  (click)="detail_program(prog)">
+                  Site web
+              </a>
+              </div>
+              <div class="col-md-12">
+                  <a  class="btn btn-lg btn_details u-btn-warning transition-3d-hover text-primary" style="background-color: #fff;"
+                  (click)="detail(un)">
+                  Détails
+                  <span class="fa fa-angle-right ml-2"></span>
+              </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="row justify-content-center">
+        <div class="paginate uk-text-center d-none d-sm-block">
+          <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade hauteur" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nouvelle Recherche</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row align-items-md-center u-space-2">
+            <div class="col-lg-12 mb-12 mb-lg-0">
+              <form class="js-focus-state input-group u-form">
+                <div class="input-group-prepend u-form__prepend">
+                  <span class="input-group-text u-form__text">
+                    <span class="fa fa-search"></span>
+                  </span>
+                </div>
+                <input type="search" class="form-control u-form__input" [(ngModel)]="search" name="search"
+                  placeholder="Filtre par projets" aria-label="Search Front">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer mb-4 col-xs-12 justify-content-center">
+          <button type="button" class="btn btn-primary col-xs-12 fermer" data-dismiss="modal">
+            Valider</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center u-space-5-top" *ngIf="loading" style="margin-top: 15vh;">
+    <div id="testimonialsNavMain"
+      class="js-slick-carousel js-slick-carousel u-slick u-content-centered-y p-4 mb-0 u-stroke-midnightblue load"
+      data-infinite="true" data-autoplay="true" data-speed="5000" data-fade="true"
+      data-nav-for="#testimonialsNavPagination">
+    </div>
+  </div>
+
+</main>
+
+
+<!-- ========== END MAIN ========== -->
+
+<div class="text-center col-xs-12 mt-5 d-block d-sm-none fixed-bottom ">
+  <button type="button" class="btn btn-primary searcher" style="margin-left: 19rem;" data-dismiss="modal"
+    data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> <i class="fas fa-search"
+      style="color:#fff"></i></button>
+
+</div>
+<div class="d-none d-sm-block">
+  <app-footer></app-footer>
+</div>

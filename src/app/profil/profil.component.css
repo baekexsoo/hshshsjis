@@ -1,0 +1,25 @@
+.di_for{
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    border: outset;
+}
+.u-label--secondary{
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    color: black;
+}
+.btn_cli{
+    margin: auto;
+    text-align: center;
+}
+.contenu{
+    width: 60%;
+    margin: auto;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}

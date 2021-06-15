@@ -1,0 +1,196 @@
+[
+    {
+        "id": "ONE",
+        "departement": "ZOU",
+        "commune": "ABOMEY",
+        "arrondissement": "Bohicon 2",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Houndjroto",
+        "lastMarketDay": "13/12/2018",
+        "products": [
+            "Mais",
+            "Kluiklui",
+            "Afintin",
+            "Orange"
+        ]
+    },
+    {
+        "id": "TWO",
+        "departement": "MONO",
+        "commune": "COME",
+        "arrondissement": "Come 1",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Le marché de Comè",
+        "lastMarketDay": "15/12/2018",
+        "products": [
+            "Manioc",
+            "Mais",
+            "Ablo"
+        ]
+    },
+    {
+        "id": "THREE",
+        "departement": "BORGOU",
+        "commune": "PARAKOU",
+        "arrondissement": "PARAKOU 3",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Azekè",
+        "lastMarketDay": "13/12/2018",
+        "products": [
+            "Mais",
+            "Igname"
+        ]
+    },
+    {
+        "id": "FOUR",
+        "departement": "OUEME",
+        "commune": "PORTO-NOVO",
+        "arrondissement": "2eme Arrondissement",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Ouando",
+        "lastMarketDay": "14/12/2018",
+        "products": [
+            "Mais",
+            "Crabe"
+        ]
+    },
+    {
+        "id": "FIVE",
+        "departement": "ATLANTIQUE",
+        "commune": "ABOMEY-CALAVI",
+        "arrondissement": "Zinvié",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Marché de Zinvié",
+        "lastMarketDay": "16/12/2018",
+        "products": [
+            "Mais",
+            "Ananas"
+        ]
+    },
+    {
+        "id": "SIX",
+        "departement": "ATLANTIQUE",
+        "commune": "TOFFO",
+        "arrondissement": "Houegbo",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Marché de Houegbo",
+        "lastMarketDay": "13/12/2018",
+        "products": [
+            "Mais",
+            "Chap-Chap"
+        ]
+    },
+    {
+        "id": "SEVEN",
+        "departement": "LITTORAL",
+        "commune": "COTONOU",
+        "arrondissement": "13e Arrondissement",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Tokpa",
+        "lastMarketDay": "13/12/2018",
+        "products": [
+            "Mais"
+        ]
+    },
+    {
+        "id": "EIGHT",
+        "departement": "MONO",
+        "commune": "COME",
+        "arrondissement": "Sè",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Marché de Sè",
+        "lastMarketDay": "17/12/2018",
+        "products": [
+            "Mais",
+            "Canne à Sucre"
+        ]
+    },
+    {
+        "id": "NINE",
+        "departement": "ATLANTIQUE",
+        "commune": "ABOMEY-CALAVI",
+        "arrondissement": "Cocotomey",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Marché de Cocotomey",
+        "lastMarketDay": "13/12/2018",
+        "products": [
+            "Mais",
+            "Coco"
+        ]
+    },
+    {
+        "id": "TEN",
+        "departement": "ZOU",
+        "commune": "BOHICON",
+        "arrondissement": "Bohicon 2",
+        "countryName": "Benin",
+        "countryIsoCodeAlpha2": "BJ",
+        "periode": 5,
+        "location": {
+            "lat": 0,
+            "lon": 0
+        },
+        "name": "Ahito",
+        "lastMarketDay": "13/12/2018",
+        "products": [
+            "Mais",
+            "Kluiklui",
+            "Afintin",
+            "Orange"
+        ]
+    }
+]

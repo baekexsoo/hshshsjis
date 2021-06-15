@@ -1,0 +1,74 @@
+
+<!-- 
+  <!-- ========== HEADER ========== -->
+<app-header></app-header>
+<!-- ========== END HEADER ========== -->
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main">
+  <!-- Description Section -->
+
+  <!-- section processus de prédiction -->
+  <div class="u-space-2-top u-space-0--lg position-relative">
+    <div class="d-lg-flex align-items-lg-center min-height-100vh--lg position-relative class_marg class_ma">
+      <div class=" u-space-1-bottom u-space-bottom-0--lg mt-5">
+        <!-- Accueil -->
+        <div class="w-lg-55 ml-4 " *ngIf="step==0">
+
+          <div class="media align-items-center mb-4">
+            <div class="d-inline-block mb-3">
+              <a class="media align-items-center bg-primary text-white font-size-14 rounded-pill p-2 pr-3" href="#">
+                <span class="d-flex mr-3">
+                  <span class="u-label u-label--sm u-label--white font-weight-bold">Commençons!</span>
+                </span>
+                <span class="media-body">
+                  Trouves la meilleure façon de cultiver ta terre.
+                </span>
+              </a>
+            </div>
+          </div>
+
+
+
+          <div class="mb-4">
+            <h1 class="text-primary display-4 font-size-48--md-down font-weight-bold">L'agriculture en 2018</h1>
+            <p class="lead">s'accompagne de la Data Science.</p>
+          </div>
+
+
+          <a class="btn btn-primary u-btn-primary u-btn-wide transition-3d-hover text-white" (click)="goto(1)">
+            Démarrez
+            <span class="fa fa-angle-right ml-2"></span>
+          </a>
+        </div>
+        <!-- End Accueil -->
+
+        <!-- selection sol -->
+        <div class="w-lg-55 mt-5" *ngIf="step==1">
+          <div class="u-bg-img-hero" style="background-image: url(../../assets/svg/bg/bg1.svg);">
+            <div class="container">
+              <!-- Title -->
+              <div class="d-sm-flex justify-content-sm-between align-items-sm-center mb-5">
+                <h2 class="h3 font-weight-medium">Quel produit voulez vous consulter? </h2>
+                <div class="js-focus-state input-group u-form">
+                  <input type="text" class="form-control u-form__input" name="nom" required
+                      [(ngModel)]="inscrit.nom"
+                       placeholder=""
+                       >
+              </div>
+              </div>
+              <!-- End Title -->
+
+              <div class="col-lg-4 align-self-lg-end">
+                <button type="submit" class="btn btn-primary u-btn-primary transition-3d-hover" (click)="btn_recherche()">Rechercher</button>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+

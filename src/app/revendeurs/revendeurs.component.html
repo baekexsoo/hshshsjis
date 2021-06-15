@@ -1,0 +1,162 @@
+<app-header></app-header>
+<main id="content" role="main">
+    <!-- Form -->
+    <div class="d-flex align-items-center position-relative min-height-100vh--lg">
+      <!-- Navbar -->
+      
+
+     <div class="col-lg-5 col-xl-4 d-none d-lg-flex align-items-center u-gradient-half-primary-v1 min-height-100vh--lg px-0">
+      <div class="w-100 p-5">
+          <app-annonce></app-annonce>
+      </div>
+    </div>
+
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-md-2 offset-lg-2 offset-xl-3 u-space-3 u-space-0--lg">
+            <!-- Form  signin-->
+            <div *ngIf="!suscribed">
+                <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)" class="js-validate mt-5">
+                          <!-- Title -->
+                          <div class="mb-7">
+                            <h1 class="h3 text-primary font-weight-normal mb-0"><span class="font-weight-bold">Inscription</span></h1>
+                            <p>Veuillez remplir le formulaire pour s'enregistrer</p>
+                          </div>
+                          <!-- End Title -->
+            
+                          <!-- Input -->
+                          <div class="js-form-message mb-4">
+                            <label class="h6 small d-block text-uppercase">Votre Nom</label>
+            
+                            <div class="js-focus-state input-group u-form">
+                                <input type="text" class="form-control u-form__input" name="nom" required
+                                    [(ngModel)]="inscrit.nom"
+                                     placeholder=""
+                                     >
+                            </div>
+                          </div>
+                          <!-- End Input -->
+                          <!-- Input -->
+                          <div class="js-form-message mb-4">
+                            <label class="h6 small d-block text-uppercase">Telephone</label>
+            
+                            <div class="js-focus-state input-group u-form">
+                                <input type="number" class="form-control u-form__input" name="numero" required
+                                    [(ngModel)]="inscrit.numero"
+                                     placeholder=""
+                                     >
+                            </div>
+                          </div>
+                          <!-- End Input -->
+                          
+                          <!-- Input -->
+                          <div class="js-form-message mb-4">
+                            <label class="h6 small d-block text-uppercase">Votre Email</label>
+            
+                            <div class="js-focus-state input-group u-form">
+                              <input type="email" class="form-control u-form__input" name="email" required
+                                     [(ngModel)]="inscrit.email"
+                                     placeholder="user@agroduniya.com"
+                                     aria-label="jack@walley.com"
+                                     data-msg="Veuillez saisir un email valide."
+                                     data-error-class="u-has-error"
+                                     data-success-class="u-has-success">
+                            </div>
+                          </div>
+                          <h1>{{sign_data}}</h1>
+                         
+                          <div class="js-form-message mb-3">
+                            <label class="h6 small d-block text-uppercase">Vous êtes</label>
+            
+                            <div class="js-focus-state input-group u-form">
+                              <select class="custom-select"  [(ngModel)]="inscrit.type" name="type">
+                                            <option value="collecteur"selected>Collecteur</option>
+                                            <option value="revendeur">Revendeur</option>
+                                            
+                                          </select>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <span class="small text-danger">{{warning}}</span><br/>
+                            
+                          </div>
+                          <!-- End Input -->
+                           <!-- Input -->
+                           <div class="js-form-message mb-4">
+                            <label class="h6 small d-block text-uppercase">Que voulez vous revendre</label>
+            
+                            <div class="js-focus-state input-group u-form">
+                                <input type="text" class="form-control u-form__input" name="quoi" required
+                                    [(ngModel)]="inscrit.quoi"
+                                     placeholder=""
+                                     >
+                            </div>
+                          </div>
+                          <!-- End Input -->
+            
+                          <!-- Checkbox -->
+                          <div class="js-form-message mb-5">
+                            <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+                              <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required
+                                      [(ngModel)]="inscrit"
+                                      data-msg="Merci d'accepter nos termes et conditions."
+                                     data-error-class="u-has-error"
+                                     data-success-class="u-has-success">
+                              <label class="custom-control-label" for="termsCheckbox">
+                                <small>
+                                  J'accepte les
+                                  <a class="u-link-muted" href="">termes et conditions</a>
+                                </small>
+                              </label>
+                            </div>
+                          </div>
+                          <!-- End Checkbox -->
+            
+                          <!-- Button -->
+                          <div class="row align-items-center mb-5">
+                            
+            
+                            <div class="col-7 col-sm-6 text-right">
+                             <button type="submit" class="btn btn-primary u-btn-primary transition-3d-hover" (click)="sign()">Demarrez</button>
+                            </div>
+                          </div>
+                          <!-- End Button -->
+                        </form>
+                      </div>
+            
+            
+            <div class="mb-7" *ngIf="suscribed">
+              <h1 class="h3 text-primary font-weight-normal mb-0"><span class="font-weight-bold">Inscription Réussie</span></h1>
+              <p>Un Email vous à été envoyé sur l'adresse <span class="text-success">{{inscrit.email}}</span>. 
+                 Veuillez consulter votre compte pour vous connecter.</p>
+              <div class="col-7 col-sm-6 text-right">
+               <a href=""  href="/home"><button type="submit" class="btn btn-primary u-btn-primary transition-3d-hover" (click)="sign()">Se Connecter</button></a>
+              </div>
+            </div>
+            
+            <!-- End Form signin -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Form -->
+  </main>
+
+<script>
+    $(document).on('ready', function () {
+      // initialization of slick carousel
+      $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
+      // initialization of form validation
+      $.HSCore.components.HSValidation.init('.js-validate', {
+        rules: {
+          confirmPassword: {
+            equalTo: '#password'
+          }
+        }
+      });
+
+      // initialization of forms
+      $.HSCore.helpers.HSFocusState.init();
+    });
+  </script>

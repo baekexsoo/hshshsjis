@@ -1,0 +1,116 @@
+<div *ngIf="!suscribed">
+    <form class="js-validate mt-5">
+              <!-- Title -->
+              <div class="mb-7">
+                <h1 class="h3 text-primary font-weight-normal mb-0"><span class="font-weight-bold">Inscription</span></h1>
+                <p>Veuillez remplir le formulaire pour s'enregistrer</p>
+              </div>
+              <!-- End Title -->
+
+              <!-- Input -->
+              <div class="js-form-message mb-4">
+                <label class="h6 small d-block text-uppercase">Votre Nom</label>
+
+                <div class="js-focus-state input-group u-form">
+                    <input type="text" class="form-control u-form__input" name="nom" required
+                        [(ngModel)]="inscrit.nom"
+                         placeholder=""
+                         >
+                </div>
+              </div>
+              <!-- End Input -->
+              <!-- Input -->
+              <div class="js-form-message mb-4">
+                <label class="h6 small d-block text-uppercase">Telephone</label>
+
+                <div class="js-focus-state input-group u-form">
+                    <input type="number" class="form-control u-form__input" name="numero" required
+                        [(ngModel)]="inscrit.numero"
+                         placeholder=""
+                         >
+                </div>
+              </div>
+              <!-- End Input -->
+              
+              <!-- Input -->
+              <div class="js-form-message mb-4">
+                <label class="h6 small d-block text-uppercase">Votre Email</label>
+
+                <div class="js-focus-state input-group u-form">
+                  <input type="email" class="form-control u-form__input" name="email" required
+                         [(ngModel)]="inscrit.email"
+                         placeholder="user@agroduniya.com"
+                         aria-label="jack@walley.com"
+                         data-msg="Veuillez saisir un email valide."
+                         data-error-class="u-has-error"
+                         data-success-class="u-has-success">
+                </div>
+              </div>
+              <h1>{{sign_data}}</h1>
+             
+              <div class="js-form-message mb-3">
+                <label class="h6 small d-block text-uppercase">Vous êtes</label>
+
+                <div class="js-focus-state input-group u-form">
+                  <select class="custom-select"  [(ngModel)]="inscrit.type" name="type">
+                                <option selected>Producteur</option>
+                                <option value="budget1">Marchand</option>
+                                
+                              </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <span class="small text-danger">{{warning}}</span><br/>
+                
+              </div>
+              <!-- End Input -->
+
+              <!-- Checkbox -->
+              <div class="js-form-message mb-5">
+                <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+                  <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required
+                          [(ngModel)]="inscrit"
+                          data-msg="Merci d'accepter nos termes et conditions."
+                         data-error-class="u-has-error"
+                         data-success-class="u-has-success">
+                  <label class="custom-control-label" for="termsCheckbox">
+                    <small>
+                      J'accepte les
+                      <a class="u-link-muted" href="">termes et conditions</a>
+                    </small>
+                  </label>
+                </div>
+              </div>
+              <!-- End Checkbox -->
+
+              <!-- Button -->
+              <div class="row align-items-center mb-5">
+                <div class="col-5 col-sm-6">
+                  <span class="small text-muted">Vous avez déjà un compte ? </span><br/>
+                  <div *ngIf="loading" id="testimonialsNavMain" class="js-slick-carousel js-slick-carousel u-slick u-content-centered-y p-4 mb-0 u-stroke-midnightblue load"
+                  data-infinite="true"
+             data-autoplay="true"
+             data-speed="5000"
+             data-fade="true"
+             data-nav-for="#testimonialsNavPagination">
+              </div>
+                  <a class="small"  href="/home">Se connecter</a>
+                </div>
+
+                <div class="col-7 col-sm-6 text-right">
+                 <button type="submit" class="btn btn-primary u-btn-primary transition-3d-hover" (click)="sign()">Demarrez</button>
+                </div>
+              </div>
+              <!-- End Button -->
+            </form>
+          </div>
+
+
+<div class="mb-7" *ngIf="suscribed">
+  <h1 class="h3 text-primary font-weight-normal mb-0"><span class="font-weight-bold">Inscription Réussie</span></h1>
+  <p>Un Email vous à été envoyé sur l'adresse <span class="text-success">{{inscrit.email}}</span>. 
+     Veuillez consulter votre compte pour vous connecter.</p>
+  <div class="col-7 col-sm-6 text-right">
+   <a href=""  href="/home"><button type="submit" class="btn btn-primary u-btn-primary transition-3d-hover" (click)="sign()">Se Connecter</button></a>
+  </div>
+</div>

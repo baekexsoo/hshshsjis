@@ -1,0 +1,122 @@
+.search{
+    /*width: 35%;*/
+    background-color: gainsboro;
+    height: 40px;
+}
+#map { height:100vh }
+.pos_titr {
+    margin-left:85%;
+}
+.w-70{
+    width: 70%;
+}
+
+.map {
+    height: 600px;
+    padding: 0;
+  }
+
+.research-background{
+    background-color: #eaebefc7;
+    border-radius: 100px;
+}  
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {   
+    .w-70{
+        width: 100%;
+    }
+    .flow {
+        margin-left: 35%;
+    }
+    .pos_titr {
+        display: -webkit-box;
+        margin-left: 0%;
+    }
+    .w-93{
+        width:93%;
+    }
+    .flow {
+        margin-left: 35%;
+    }
+    .btn-position{
+        position: fixed;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        z-index: 1000;
+        bottom: 0
+    }
+
+    .my-pagination{
+        margin-left: -37px
+    }
+
+  .searcher{
+    right: 0px;
+    float: right;
+    margin-right: 19px;
+    margin-bottom: 6px;
+  }
+
+  .fermer{
+    width: 48%;
+    margin-right: 23px;
+  }
+
+    .hauteur{
+        height:100%
+    }
+
+    .research-background{
+        background-color: #eaebefc7;
+        border-radius: 5px;
+    }
+
+    .form-pad{
+        padding-top: 5%;
+    }
+
+    .research-bar-show{
+        display: block;
+    }
+    
+    .research-bar-hide{
+        display: none;
+    }
+ }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {    
+    .w-70{
+        width: 100%;
+    }
+    
+    .research-background{
+        background-color: #eaebefc7;
+        border-radius: 5px;
+    }
+
+        
+    .form-pad{
+        padding-top: 5%;
+    }
+
+    .research-bar-show{
+        display: block;
+    }
+    
+    .research-bar-hide{
+        display: none;
+    }
+
+ }
+
+ .cent_log{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top:-50%;
+    margin-bottom: 35%;
+}

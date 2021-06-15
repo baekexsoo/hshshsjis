@@ -1,0 +1,146 @@
+<app-header></app-header>
+
+
+
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" style="min-height:-webkit-fill-available">
+  <div class="container  w-100 u-space-3-top--lg mb-5 " *ngIf="!loading">
+
+    <!--div class="row" *ngFor="let dist of liste_distributeurs | filter:search | paginate: { itemsPerPage: 7, currentPage: p }">
+                                    <div class="col-sm-4" cols="4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{ dist.socialReason }}</h5>
+                                                <p class="card-text"> {{ dist.email }} </p>
+                                                <a class="btn btn-primary" style="color: #fff"> {{ dist.telephone }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                </div-->
+    <div class="container position-relativez-index-2 pos_titr mb-4">
+      <div class="mx-auto">
+        <h1 class="h4 text-primary" style="font-size: 1.7rem;">Distributeurs</h1>
+      </div>
+    </div>
+
+    <div class="row align-items-md-center u-space-2 d-none d-sm-block">
+      <div class="col-lg-12 mb-12 mb-lg-0">
+        <form class="js-focus-state input-group u-form">
+          <div class="input-group-prepend u-form__prepend">
+            <span class="input-group-text u-form__text">
+              <span class="fa fa-search"></span>
+            </span>
+          </div>
+          <input type="search" class="form-control u-form__input" [(ngModel)]="search" name="search"
+            placeholder="Filtre par raison sociale" aria-label="Search Front">
+        </form>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div *ngFor="let dist of liste_distributeurs | filter:search | paginate: { itemsPerPage: 4, currentPage: p }"
+        class="col-md-4 col-sm-4 col-xs-12 col-12">
+        <div class="wrapper col-md-10">
+          <div class="outer col-md-12 ">
+            <div class="content animated fadeInLeft">
+              <h4 class="btn btn-primary" style="height: 23px;padding-top: 0px;padding-left: 5px;padding-right: 2px;">
+                {{ dist.socialReason }} <br /></h4>
+
+
+              <hr style="width: 138%;">
+
+              <div class="sectors"> <i class="far fa-envelope"></i> <span class="email"> {{ dist.email }}</span>
+                <span *ngIf="!dist.email" class="email"> e-mail indisponible </span>
+              </div>
+              <div class="button">
+                <a><strong class="mb-2"><i class="fas fa-phone fa-fw"></i> </strong> </a><a class="cart-btn phone"
+                  style="background: #fff;color: #111;font-size:15px"><i class="cart-icon ion-bag"></i> <strong>
+                    {{ dist.telephone }} </strong> </a>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Title -->
+    <!--div class="mb-7">         
+          <button (click)="aff_tab()" >ssssssss</button>
+          <button (click)="aff_maps()" >sgdrghd</button>
+        </div-->
+    <!-- End Title -->
+
+    <div style="background-color: #eaebefc7; border-radius: 100px">
+     
+    </div>
+  </div>
+  <div class="u-space-3-bottom">
+    <div class="container w-70" *ngIf="!loading">
+
+      <div class="row justify-content-center">
+        <div class="paginate uk-text-center d-none d-sm-block">
+          <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade hauteur" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nouvelle Recherche</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="row align-items-md-center u-space-2">
+            <div class="col-lg-12 mb-12 mb-lg-0">
+              <form class="js-focus-state input-group u-form">
+                <div class="input-group-prepend u-form__prepend">
+                  <span class="input-group-text u-form__text">
+                    <span class="fa fa-search"></span>
+                  </span>
+                </div>
+                <input type="search" class="form-control u-form__input" [(ngModel)]="search" name="search"
+                  placeholder="Filtre par raison sociale" aria-label="Search Front">
+              </form>
+            </div>
+          </div>
+      
+      </div>
+      <div class="modal-footer mb-4 col-xs-12 justify-content-center">
+        <button type="button" class="btn btn-primary col-xs-12 fermer" data-dismiss="modal">
+          Valider</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row justify-content-center u-space-5-top" *ngIf="loading" style="margin-top: 15vh;">
+    <div id="testimonialsNavMain"
+      class="js-slick-carousel js-slick-carousel u-slick u-content-centered-y p-4 mb-0 u-stroke-midnightblue load"
+      data-infinite="true" data-autoplay="true" data-speed="5000" data-fade="true"
+      data-nav-for="#testimonialsNavPagination">
+    </div>
+  </div>
+
+</main>
+<!-- ========== END MAIN ========== -->
+
+<div class="text-center col-xs-12 mt-5 d-block d-sm-none fixed-bottom ">
+  <button type="button" class="btn btn-primary searcher" style="margin-left: 19rem;" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >  <i class="fas fa-search" style="color:#fff"></i></button>
+   <!--button type="button" class="btn btn-primary u-btn-primary u-btn-wide transition-3d-hover mb-4 w-93" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+   <i class="fas fa-search" style="color:#fff"></i>
+   </button-->
+ </div>
+<div class="d-none d-sm-block">
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,30 @@
+.text-primary {
+    color : #132d5c !important;
+}
+.text-success {
+    color : #35b729 !important;
+}
+
+.badge-success {
+    background-color:  #35b729 !important;
+}
+a, a:hover {
+    color : #132d5c;
+    
+}
+
+.btn-primary  {
+    background-color: #132d5c;
+    border-color: #132d5c;
+    
+}
+
+.btn-primary:hover {
+    background-color: #37b82c;
+    border-color: #37b82c;
+}
+
+.u-gradient-half-primary-v1 {
+    
+    background-image : linear-gradient(150deg, #132d5c 0%, #132d5c 100%);
+}

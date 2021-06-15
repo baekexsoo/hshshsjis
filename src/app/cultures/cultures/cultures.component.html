@@ -1,0 +1,196 @@
+<app-header></app-header>
+
+
+
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" style="min-height:-webkit-fill-available">
+  <div class="container u-space-3-top--lg mb-5">
+
+    <!-- Title -->
+    <!--div class="mb-7">         
+          <button (click)="aff_tab()" >ssssssss</button>
+          <button (click)="aff_maps()" >sgdrghd</button>
+        </div-->
+    <!-- End Title -->
+
+    <!--div class="research-background">
+      <form class="js-validate mt-5 form-pad">
+
+        <div class="row ml-5 mr-5">
+          <!-- Input -->
+    <!--div class="col-sm-3 col-xs-3 mt-2 ">
+            <div class="js-form-message">
+              <label class="h6 small d-block text-uppercase">
+                Département
+
+              </label>
+
+              <div class="js-focus-state input-group u-form">
+                <select class="custom-select" name="commune" [(ngModel)]="objet_list.departement" (change)="list_commune()">
+                  <option selected value="">Tous</option>
+                  <option selected *ngFor="let d of liste_departement" [ngValue]="d.departement">{{d.departement}}</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <span class="small text-danger">{{warning}}</span><br />
+
+              </div>
+            </div>
+          </div-->
+    <!-- End Input -->
+
+    <!-- Input -->
+    <!--div class="col-sm-3 mt-2">
+            <div class="js-form-message">
+              <label class="h6 small d-block text-uppercase">
+                Ville
+
+              </label>
+
+              <div class="js-focus-state input-group u-form">
+                <select class="custom-select" name="commune" [(ngModel)]="objet_list.zone">
+                  <option selected value="">Tous</option>
+                  <option selected *ngFor="let c of liste_communes" [ngValue]="c">{{c}}</option>
+                </select>
+
+              </div>
+            </div>
+          </div>
+          <!-- End Input -->
+
+    <!-- Input -->
+    <!--div class="col-sm-3 mt-2">
+            <div class="js-form-message">
+              <label class="h6 small d-block text-uppercase">
+                Produits
+
+              </label>
+
+              <div class="js-focus-state input-group u-form " (click)="d.toggle()">
+                <input class="form-control u-form__input" type="text" id="dp" placeholder="Exemple : Sorgho"
+                  [(ngModel)]="objet_list.produit" name="name">
+              </div>
+            </div>
+          </div>
+          <!-- End Input -->
+    <!-- Input -->
+    <!--div class="col-sm-3 mt-5">
+            <div class="text-center ">
+              <button type="submit" (click)="getAll()" class="btn btn-primary u-btn-primary u-btn-wide transition-3d-hover mb-4">Recherche</button>
+            </div>
+          </div>
+          <!-- End Input -->
+    <!--/div>
+      </form>
+    </div-->
+  </div>
+  <div class="u-space-3-bottom">
+    
+    <div class="container w-70" *ngIf="!loading">
+        <div class="container position-relativez-index-2 pos_titr mb-4">
+            <div class="mx-auto">
+              <h1 class="h4 text-primary" style="font-size: 1.7rem;">Produits agricoles</h1>
+            </div>
+          </div>
+     
+
+          <div class="row align-items-md-center u-space-2 d-none d-sm-block">
+              <div class="col-lg-12 mb-12 mb-lg-0">
+                <form class="js-focus-state input-group u-form">
+                  <div class="input-group-prepend u-form__prepend">
+                    <span class="input-group-text u-form__text">
+                      <span class="fa fa-search"></span>
+                    </span>
+                  </div>
+                  <input type="search" class="form-control u-form__input" [(ngModel)]="search" name="search"
+                    placeholder="Filtre par produits" aria-label="Search Front">
+                </form>
+              </div>
+            </div>
+  
+      <table class="table  table-hover" style="background-color:#ffffffe0; border-radius: 10px;">
+        <thead>
+          <tr>
+            <th>Culture</th>
+            <th>Nom de la variété</th>
+            <th>Cycle</th>
+            <th class="aff_chm">Rendement potentiel</th>
+            <!--th>Resistance de la variété</th-->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let export of list |filter: search | paginate: { itemsPerPage: 7, currentPage: p }">
+            <td style="width:40vh"><small> {{ export.culture }} </small></td>
+            <td style="width:50vh;"><small> {{ export.variete }} </small> </td>
+            <td style="width:50vh;"><small> {{ export.cycleMaturite }} Jours </small> </td>
+            <td style="width:50vh" class="uk-text-center aff_chm"><small> {{ export.rendementPotentiel }} T/Ha </small> </td>
+            <!--td style="width:40vh"><small> {{ export.resistance }}  </small> </td-->
+
+          </tr>
+
+        </tbody>
+
+      </table>
+      <div class="row justify-content-center">
+        <div class="paginate uk-text-center d-none d-sm-block">
+          <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade hauteur" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nouvelle Recherche</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-md-center u-space-2">
+            <div class="col-lg-12 mb-12 mb-lg-0">
+              <form class="js-focus-state input-group u-form">
+                <div class="input-group-prepend u-form__prepend">
+                  <span class="input-group-text u-form__text">
+                    <span class="fa fa-search"></span>
+                  </span>
+                </div>
+                <input type="search" class="form-control u-form__input" [(ngModel)]="search" name="search"
+                  placeholder="Filtre par produits" aria-label="Search Front">
+              </form>
+            </div>
+          </div>
+    
+        </div>
+        <div class="modal-footer mb-4 col-xs-12 justify-content-center">
+          <button type="button" class="btn btn-primary col-xs-12 fermer" data-dismiss="modal">
+            Valider</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center u-space-5-top" *ngIf="loading" style="margin-top: 15vh;">
+    <div id="testimonialsNavMain"
+      class="js-slick-carousel js-slick-carousel u-slick u-content-centered-y p-4 mb-0 u-stroke-midnightblue load"
+      data-infinite="true" data-autoplay="true" data-speed="5000" data-fade="true"
+      data-nav-for="#testimonialsNavPagination">
+    </div>
+  </div>
+
+</main>
+<!-- ========== END MAIN ========== -->
+
+<div class="text-center col-xs-12 mt-5 d-block d-sm-none fixed-bottom ">
+  <button type="button" class="btn btn-primary searcher" style="margin-left: 19rem;" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >  <i class="fas fa-search" style="color:#fff"></i></button>
+   <!--button type="button" class="btn btn-primary u-btn-primary u-btn-wide transition-3d-hover mb-4 w-93" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+   <i class="fas fa-search" style="color:#fff"></i>
+   </button-->
+ </div>
+<div class="d-none d-sm-block">
+  <app-footer></app-footer>
+</div>

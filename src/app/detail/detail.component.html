@@ -1,0 +1,105 @@
+<app-header></app-header>
+
+
+<main id="content" role="main" style="min-height:-webkit-fill-available">
+  <div class="container u-space-3-top--lg mb-5">
+    <div class="container position-relativez-index-2 pos_titr mb-4">
+      <div class="mx-auto">
+        <h1 class="h4 text-primary" style="font-size: 1.7rem;">Détails</h1>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row align-items-md-center u-space-2 d-none d-sm-block">
+
+        <h5 class=" text-primary "   style="margin:0 0 40px 100px;">
+          <span >{{mydetail.name}}</span>
+        
+        </h5>
+      
+
+      <div class="container" style=" background-color: #f2f2f2; padding-top: 10px;" >
+      
+          <div style="margin:0 0 0px 880px; " >
+            
+            <button style="padding:5px 25px 5px 25px;font-weight: bold;" class="btn btn-primary">   <a href="{{mydetail.website}}" >
+                     Aller sur le site web
+                  </a></button>
+                </div>
+
+
+        <table style="width:100%;">
+
+          
+     
+         
+
+            <tr>
+            <th>Fédération des producters:</th>
+            <td>{{mydetail.parent}}</td>
+            </tr>
+
+
+            <tr>
+              <th>Téléphone:</th>
+              <td>{{mydetail.contacts}}</td>
+              </tr>
+
+
+              <tr>
+                <th>Boite postal:</th>
+                <td>{{mydetail.postBox}}</td>
+                </tr>
+
+
+                <tr>
+                  <th>Responsable:</th>
+                  <td>{{mydetail.responsibleName}}</td>
+                </tr>
+                 
+
+                  <tr>
+                    <th>Adresse géographique :</th>
+                    <td>{{mydetail.seat}}</td>
+                    </tr>
+
+
+                    <tr>
+                      <th>Produits:</th>
+                      <td>{{mydetail.products}}</td>
+                      </tr>
+
+                      <tr>
+                        <th>Mail:</th>
+                        <td>{{mydetail.mail}}</td>
+                        </tr>
+
+
+           
+          </table>
+          
+       
+      </div>
+    </div>
+
+
+            
+    
+
+
+    </main>
+
+
+
+
+<div class="text-center col-xs-12 mt-5 d-block d-sm-none fixed-bottom ">
+    <button type="button" class="btn btn-primary searcher" style="margin-left: 19rem;" data-dismiss="modal"
+      data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> <i class="fas fa-search"
+        style="color:#fff"></i></button>
+
+  </div>
+
+<div class="d-none d-sm-block">
+  <app-footer></app-footer>
+</div>

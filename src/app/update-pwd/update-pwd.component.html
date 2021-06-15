@@ -1,0 +1,92 @@
+
+<app-header *ngIf="act_header"></app-header>
+
+<main id="content" role="main">
+    <div class="d-flex align-items-center position-relative min-height-100vh--lg">
+
+    <div class="col-lg-5 col-xl-4 d-none d-lg-flex align-items-center u-gradient-half-primary-v1 min-height-100vh--lg px-0">
+        <div class="w-100 p-5">
+            <app-annonce></app-annonce>
+        </div>
+      </div>
+<div *ngIf="!confirm" class="col-md-8 col-lg-7 col-xl-6 offset-md-2 offset-lg-2 u-space-top-0--lg">
+    <div class="mb-7">
+        <h2 class="h3 text-primary font-weight-normal mb-0">Modifier votre mot de passe<span class="font-weight-bold"> .</span></h2>
+
+      </div>
+<form class="js-validate w-60 mx-auto dis__form">
+  <div *ngIf="act_btn" class="js-form-message mb-4">
+    <label class="h6 small d-block text-uppercase">Ancien mot de passe</label>
+
+    <div class="js-focus-state input-group u-form">
+      <input type="text" class="form-control u-form__input" [(ngModel)]="ancien" name="ancien" required
+             placeholder="**********"
+             aria-label="jack@walley.com"
+             data-msg="Veuillez saisir un mot de passe valide."
+             data-error-class="u-has-error"
+             data-success-class="u-has-success">
+    </div>
+  </div>
+
+  <div class="js-form-message mb-4">
+    <label class="h6 small d-block text-uppercase">Mot de passe</label>
+
+    <div class="js-focus-state input-group u-form">
+      <input type="password" class="form-control u-form__input" [(ngModel)]="nouveau" name="password" required
+             placeholder="********"
+             aria-label="********"
+             data-msg="Votre mot de passe est invalide. rééssayez."
+             data-error-class="u-has-error"
+             data-success-class="u-has-success">
+    </div>
+  </div>
+
+  <div class="js-form-message mb-3">
+    <label class="h6 small d-block text-uppercase">Confirmation </label>
+
+    <div class="js-focus-state input-group u-form">
+      <input type="password" class="form-control u-form__input bot" [(ngModel)]="confirme" name="confirmPassword" required
+             placeholder="********"
+             aria-label="********"
+             data-msg="Le mot de passe ne "
+             data-error-class="u-has-error"
+             data-success-class="u-has-success">
+    </div>
+  </div>
+  <div class="col-12">
+    <span class="small text-danger aff_erreu">{{sms_erreur}}</span><br/>
+  </div>
+  
+  <div class="col-5 col-sm-6">
+     
+     
+    </div>
+
+
+  <div class="row align-items-center mb-5">
+      <div class="col-7 col-sm-6 text-center  btn_cli">
+         
+<div *ngIf="charg" id="testimonialsNavMain" class="js-slick-carousel js-slick-carousel u-slick u-content-centered-y p-4 mb-0 u-stroke-midnightblue load"
+data-infinite="true"
+data-autoplay="true"
+data-speed="5000"
+data-fade="true"
+data-nav-for="#testimonialsNavPagination">
+</div>
+      <button type="submit" class="btn btn-primary u-btn-primary transition-3d-hover " (click)="finale()">MODIFIER</button>
+    </div>
+  </div>
+</form>
+</div>
+
+
+<div class="mb-7 con_marg" *ngIf="confirm">
+  <h1 class="h3 text-primary font-weight-normal mb-0"><span class="font-weight-bold">Modification Réussie</span></h1>
+  <p>Votre nouveau mot de passe a bien été sauvegardé. </p>
+  <div class="col-7 col-sm-6 text-right">
+   <a routerLink="/prediction" ><button type="submit" class="btn btn-primary u-btn-primary text-white transition-3d-hover"> Retour</button></a>
+  </div>
+</div>
+</div>
+</main>
+<app-footer></app-footer>

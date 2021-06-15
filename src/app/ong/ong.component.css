@@ -1,0 +1,40 @@
+.p-6{
+    padding: 0.5rem !important;
+
+}
+
+.body-card{
+    background-color: #eff0f2;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    height: 188px
+}
+.fas{
+    margin-right:12px;
+    margin-left:8px
+
+}
+.text-secondary{
+    float: right;
+    margin-right: 15px;
+    font-size: 11px;
+}
+.nom{
+    font-size: 102%;
+    margin-left: 12px;
+}
+.form{
+    border: 1px solid #d4d7dd;
+}
+
+.pos_titr {
+    margin-left:85%;
+}
+
+@media (max-width: 575.98px) {   
+  
+    .pos_titr {
+        display: -webkit-box;
+        margin-left: 0%;
+    }
+    }
